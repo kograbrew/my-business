@@ -70,13 +70,22 @@
   .btn:hover { filter: brightness(1.1); }
   .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   .note { margin: 14px 0 0; color: var(--muted); font-size: 0.95rem; }
-  @media (max-width: 480px) { .btn { display: block; width: 100%; } }
+  .price li { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 24px; }
+  .price .name { font-weight: 600; }
+  .price .cond { display: block; color: var(--muted); font-size: 0.95rem; font-weight: 400; }
+  .price .sum { font-weight: 700; white-space: nowrap; }
+  .terms { margin: 0 0 40px; color: var(--muted); font-size: 0.95rem; }
+  .terms p { margin: 0 0 8px; }
+  @media (max-width: 480px) {
+    .btn { display: block; width: 100%; }
+    .price li { flex-direction: column; }
+  }
 </style>
 </head>
 <body>
 <main>
   <h1>KOGRA</h1>
-  <p class="who">Робимо комбучу й продаємо гуртом для бізнесу: барів, кафе, бань, спортклубів і магазинів.</p>
+  <p class="who">Робимо комбучу й продаємо гуртом для бізнесу: барів, кафе, бань, спортклубів і магазинів. Купити можна й у роздріб.</p>
 
   <h2>Що ми пропонуємо</h2>
   <ul>
@@ -84,6 +93,32 @@
     <li>Можна спершу спробувати: безкоштовний дегустаційний набір із трьох смаків.</li>
     <li>Тримаємо стабільну якість і свіжість, доставляємо Новою Поштою.</li>
   </ul>
+
+  <h2>Послуги і ціни</h2>
+  <ul class="price">
+    <li>
+      <span class="name">Опт для закладів
+        <span class="cond">Пляшка 0,33 л, від 24 шт (1 440 грн). Класика, Жасмин і Каркаде — смаки можна поєднувати.</span></span>
+      <span class="sum">60 грн/пляшка</span>
+    </li>
+    <li>
+      <span class="name">Роздріб для всіх
+        <span class="cond">Мінімум 6 пляшок (570 грн), наприклад по 2 кожного смаку.</span></span>
+      <span class="sum">95 грн/пляшка</span>
+    </li>
+    <li>
+      <span class="name">Дегустаційний набір
+        <span class="cond">3 пляшки, по одній кожного смаку. Один набір на заклад.</span></span>
+      <span class="sum">безкоштовно</span>
+    </li>
+  </ul>
+
+  <div class="terms">
+    <p>Доставка: у Києві опт від 24 шт привозимо самі, безкоштовно. В інші міста й для роздрібу — Новою Поштою.</p>
+    <p>Зберігання: 90 днів у холодильнику при +2…+6 °C.</p>
+    <p>Бонус: перше замовлення протягом 14 днів після дегустації — +1 пляшка на кожні 12.</p>
+    <p>Замовити: Instagram, Telegram 097 081 51 24 або kograinfo@gmail.com.</p>
+  </div>
 
   <!-- Куди веде кнопка: змініть адресу в href, якщо зміниться акаунт Instagram -->
   <a class="btn" href="https://www.instagram.com/kogra.brew" target="_blank" rel="noopener">Отримати безкоштовний дегустаційний набір</a>
